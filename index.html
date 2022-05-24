@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Entradas Digitales</title>
+    <link rel="stylesheet" href="css/style2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <main class="container">
+        <div class="c1">
+            <H1 class="title-main">¿QUÉ ES UNA ENTRADA DIGITAL?</H1>
+            <p class="p-main">Una señal digital es una variación de voltaje entre -Vcc a +Vcc sin pasar por los valores intermedios. Por lo tanto, una señal digital dispone solo de dos estados. Al valor inferior de tensión -Vcc le asociamos un valor lógico LOW o '0', mientras que al valor superior +Vcc le asociamos HIGH o '1' lógico.
+
+Sin embargo en el mundo físico las referencias de tensión realmente son continuas. El proceso de lectura digital es un proceso de discretización de una señal analógica, el valor de la tensión, en un valor digital que representamos mediante dos estados, LOW y HIGH.
+
+En realidad una entrada digital realiza una comparación de la medición con un valor de tensión umbral. Si el valor medido es superior a la tensión umbral se devuelve HIGH, y si es inferior LOW. El valor de la tensión umbral varía de un autómata a otro, e incluso no tiene porque permanecer constante a lo largo del tiempo.</p>
+        </div>
+        <div class="c2">
+            <h1 class="title">CONEXIÓN DE ENTRADAS DIGITALES EN ARDUINO</h1>
+            <p class="p">En Arduino las entradas y salidas digitales comparten pin, motivo por el que se denominan I/O digitales. Esto significa que el mismo pin puede ejecutar funciones tanto de entrada como de salida aunque, lógicamente, no de forma simultánea. Es necesario configurar un pin I/O como entrada o salida en el código.
+
+Arduino dispone de un número diferente de I/O digitales en función del modelo, cómo vimos en la entrada ¿Qué es Arduino? ¿Qué modelo comprar?. Por ejemplo, Arduino UNO dispone de 16 I/O digitales y Arduino MEGA de 54.
+
+En Arduino los valores de alimentación habituales son 0V y 5V. En este caso la tensión umbral será muy cercana a 2'5V. Por tanto si medimos una tensión con un valor intermedio entre 0 a 2'5V Arduino devolverá una lectura LOW, y si medimos un valor entre 2'5V y 5V, devolvera HIGH.</p>
+            <div class="img">
+                <img src="./img/conexion.jpg" alt="arduino">
+            </div>
+            <h1 class="title">CÓDIGO EN ARDUINO</h1>
+            <p>El código para realizar la lectura es realmente sencillo. Simplemente tenemos que configurar un I/O digital como entrada con pinMode() y realizar l
+                a lectura con digitalRead().
+
+            Los pines configurados como entradas están en estado de alta impedancia, es decir, se comportan como resistencias de muy elevado valor (del orden de 100 megaohmnios). Por tanto, por ellos circula una intensidad despreciable.
+</p>
+            <h2 class="subtitle"></h2>
+       
+            <div class="img">
+                <img src="./img/codigo.jpg" alt="arduino">
+            </div>
+            <h2 class="subtitle">LECTURA DE VALORES MAYORES DE 5V</h2>
+            <p>Hemos comentado que bajo ningún concepto debemos introducir un voltaje fuera del rango 0 a 5V en un pin de Arduino o nos arriesgamos a dañarlo permanentemente. Si queremos medir un nivel de tensión superior a los límites de alimentación la forma más conveniente es emplear un simple divisor de tensión.
+
+Por ejemplo, para leer una señal digital entre 0 a 12V podemos emplear un esquema como el siguiente.</p>
+            <div class="img">
+                <img src="./img/5v.jpg" alt="arduino">
+            </div>
+        </div>
+        <div class="c3">
+            <H1 class="title-main2">Video Tutorial</H1>
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/TfB_eaaFGdM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

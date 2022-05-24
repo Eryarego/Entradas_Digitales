@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --very-light-pink: #C7C7C7;
+    --p: 2rem;
+    --h2: 3rem;
+    --h1: 4rem;
+  }
+
+body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.container {
+    display: grid;
+    width: 100%;
+}
+
+.c1 {
+    background-color: #E8F9FD;
+    width: 100%;
+    height: 63rem;
+    background-image: url(../img/arduino.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.c2 {
+    display: grid;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 270rem;
+    background-color: var(--white);
+}
+
+.c3 {
+    display: grid;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 48rem;
+    background-color: #383838;
+}
+
+.img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-main {
+    margin-top: 15rem;
+    margin-bottom: 4rem;    
+    font-size: var(--h1);
+    color: var(--white);
+    text-align: center;
+}
+
+.title {
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    font-size: var(--h1);
+    color: var(--black);
+    text-align: center;
+}
+
+.title-main2 {
+    margin-top: 5rem;   
+    font-size: var(--h1);
+    color: var(--white);
+    text-align: center;
+}
+
+.subtitle {
+    margin-left: 15%;
+    font-size: var(--h2);
+}
+
+.p-main {
+    margin-left: 15%;
+    margin-right: 15%;
+    font-size: var(--p);
+    color: var(--white);
+    text-align: justify;  
+}
+
+p {
+    margin-left: 15%;
+    margin-right: 15%;
+    font-size: var(--p);
+    color: var(--black);
+    text-align: justify;
+}
+
+ul {
+    margin-left: 20%;
+    font-size: var(--p);
+}
